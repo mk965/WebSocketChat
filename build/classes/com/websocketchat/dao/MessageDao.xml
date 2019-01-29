@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.websocketchat.dao.MessageDao">
+	<!-- 添加记录 -->
+	<insert id="addMessage" parameterType="com.websocketchat.beans.MsgInfo">
+		INSERT INTO
+	msginfo(chatroom,msgfrom,msgto,msgkind,msgcontent,msgtime)
+	values(#{chatroom},#{msgfrom},#{msgto},#{msgkind},#{msgcontent},now())
+	</insert>
+	<!-- 获取聊天信息 -->
+	<select id="getMessage" resultType="com.websocketchat.beans.MsgInfo">
+		select * from msginfo
+	</select>
+	<delete id="clearMessage" parameterType="int">
+        delete from msginfo where chatroom=#{chatroom}
+    </delete>
+</mapper>

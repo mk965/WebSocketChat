@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/jsp/admin/admin_adgk.jsp=UTF-8
+encoding//WebContent/WEB-INF/jsp/admin/admin_gonggaolist.jsp=UTF-8
+encoding//WebContent/WEB-INF/jsp/admin/admin_home.jsp=UTF-8
+encoding//WebContent/WEB-INF/jsp/admin/admin_roomgk.jsp=UTF-8
+encoding//WebContent/WEB-INF/jsp/admin/admin_roomlist.jsp=UTF-8
+encoding//WebContent/WEB-INF/jsp/admin/admin_usergk.jsp=UTF-8
+encoding//WebContent/WEB-INF/jsp/admin/admin_userlist.jsp=UTF-8
+encoding//WebContent/WEB-INF/jsp/admin/index.jsp=UTF-8
+encoding//WebContent/WEB-INF/jsp/index.jsp=UTF-8
+encoding//WebContent/WEB-INF/jsp/index_chatroom.jsp=UTF-8
+encoding//WebContent/WEB-INF/jsp/index_home.jsp=UTF-8
+encoding//WebContent/WEB-INF/jsp/login.jsp=UTF-8
+encoding//WebContent/assets/admin/css/admin.css=UTF-8
+encoding//src/com/websocketchat/server/ChatServer.java=UTF-8

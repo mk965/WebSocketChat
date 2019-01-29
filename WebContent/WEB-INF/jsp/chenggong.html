@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>申诉账号</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/app.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/color.css"/>
+</head>
+<body>
+<div id="container"><div id="output"></div></div>
+	<div class="color">
+		<p class="p1">QUST聊天室</p>
+	<br />
+	<br />
+<div class="am-g">
+	<div class="am-u-lg-4 am-u-md-6 am-u-sm-centered">
+  <div id="lx"  style="height: 160px;"></div>
+  <div class="gx ">
+  	<div class="cg" >
+  	<img src="img/duihao.jpg" />
+  	<p>恭喜您申诉成功 ! ! !</p>
+  	</div>
+  	<br />
+      <div class="am-cf" >
+      	<div class="am-btn am-btn-primary am-btn-default am-btn-sm am-fl" style="border-radius:10px ;">
+          <a href="xiugai.html" style="color: white;" >修改密码</a>
+       </div>
+      </div>
+    </form>
+ </div>
+</div>
+</div>
+</body>
+  <script src="assets/js/jquery.js" type="text/javascript"></script>
+  <script src="assets/js/vector.js" type="text/javascript"></script>
+  
+<script>
+$(function(){
+	// 初始化 传入dom id
+	var victor = new Victor("container", "output");
+	
+	$(".color").each(function(index, val) {
+		 $(this).mouseover(function(){
+			victor(color).set();
+		 })
+	});
+});
+</script>
+</html>

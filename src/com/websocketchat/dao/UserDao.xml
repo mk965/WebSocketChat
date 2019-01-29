@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.websocketchat.dao.UserDao">
+
+	<!-- 添加用户信息 -->
+	<insert id="addUser" parameterType="String">
+		INSERT INTO
+		userinfo(user_name,password,user_mail)
+		VALUES(#{user_name},#{password},#{user_mail})
+
+	</insert>	
+	<insert id="addUserPermission" parameterType="String">
+		INSERT INTO
+		rolespermissions(role_name,permission)
+		VALUES(#{username},#{permission})
+
+	</insert>	
+	<!-- 删除用户-->
+	<delete id="deleteUser" parameterType="int">
+		DELETE FROM userinfo
+		WHERE id = #{id}
+	</delete>
+	<!-- 更新用户 -->
+	<update id="updateUser" parameterType="String">
+		UPDATE userinfo
+		<trim prefix="SET" suffixOverrides=",">
+			<if test="user_name != null and user_name != ''">user_name=#{user_name},</if>
+			<if test="user_face != null and user_face != ''">user_face=#{user_face},</if>
+			<if test="user_qianming != null and user_qianming != ''">user_qianming=#{user_qianming}</if>
+		</trim>
+		WHERE user_mail = #{user_mail}
+	</update>
+	
+	<!-- 更新用户权限 -->
+	<update id="updatePermission" parameterType="String">
+		UPDATE roles_permissions
+		<trim prefix="SET" suffixOverrides=",">
+			<if test="role_name != null and role_name != ''">role_name=#{role_name},</if>
+			<if test="permission != null and permission != ''">permission=#{permission},</if>
+		</trim>
+		WHERE user_mail = #{user_mail}
+	</update>
+	
+	<!-- 初始化用户信息页面 -->
+	<select id="getUser" resultType="com.websocketchat.beans.Users">
+		select * from userinfo where user_name=#{user_name} 
+	</select>
+	
+	<!-- 获取所有用户 -->
+	<select id="getUsers" resultType="com.websocketchat.beans.Users">
+		select * from userinfo
+	</select>
+	
+
+</mapper>
